@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web_php:
+    container_name: docker_web_php
+    image: php-docker:dockerfile_php
+    build:
+      context: ./
+    volumes:
+      - /Users/norbertogomez/Documents/projects/tests/php:/var/www/html
+    ports:
+      - 9000:80
